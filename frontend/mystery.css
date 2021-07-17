@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(95, 37, 16);
+    text-align: center;
+}
+
+.big_button {
+    background-color: grey;
+    color: white;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 10rem;
+    font-size: 10rem;
+    border-radius: 10rem;
+}
