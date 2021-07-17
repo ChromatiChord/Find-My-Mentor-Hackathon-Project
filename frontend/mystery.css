@@ -11,4 +11,5 @@ body {
     margin-top: 10rem;
     font-size: 10rem;
     border-radius: 10rem;
+    border: 1px solid grey;
 }
