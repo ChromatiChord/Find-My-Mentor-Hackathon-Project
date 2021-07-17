@@ -2,7 +2,8 @@
 
 ## STUDENT SIGN UP
 #### Request
-```{
+```
+{
 	First name
 	Last name
 	Mobile Number
@@ -15,7 +16,8 @@
 ```
 
 #### Response
-```{
+```
+{
 	auth_token (String)
 }
 ```
@@ -23,13 +25,15 @@
 
 ## STUDENT SIGN IN
 #### Request
-```{
+```
+{
 	Email
 	Password	
 }
 ```
 #### Response
-```{
+```
+{
 	auth_token
 }
 ```
@@ -37,12 +41,14 @@
 
 ## GET STUDENT DASHBOARD INFO
 #### Request
-```{
+```
+{
   auth_token
 }
 ```
 #### Response
-```{
+```
+{
 	First name
 	Education Category (Could select ANY)
 	Preferred Teaching level: [PS, HS, UND, POST]
@@ -53,7 +59,8 @@
 
 ## MENTOR SIGN UP
 #### Request
-```{
+```
+{
 	First name
 	Last name
 	Mobile Number
@@ -66,7 +73,8 @@
 }
 ```
 #### Response
-```{
+```
+{
   auth_token
 }
 ```
@@ -74,13 +82,15 @@
 
 ## MENTOR SIGN IN
 #### Request
-```{
+```
+{
 	Email
 	Password	
 }
 ```
 #### Response
-```{
+```
+{
   auth_token
 }
 ```
@@ -88,12 +98,14 @@
 
 ## GET MENTOR DASHBOARD INFO
 #### Request
-```{
+```
+{
   auth_token
 }
 ```
 #### Response
-```{
+```
+{
 	First name
 	Education Category (Could select ANY)
 	Preferred Teaching level (String: HS, Uni, or postgrad)
