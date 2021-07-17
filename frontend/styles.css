@@ -54,16 +54,3 @@ p {
 .title-image {
     border-radius: 1rem;
 }
-
-/* Features Section */
-
-#whatWeDo {
-    padding-top: 7%;
-    padding-bottom: 7%;
-}
-
-.feature {
-    border-radius: 1rem;
-    background-color: whitesmoke;
-    margin: 1.25rem;
-}
