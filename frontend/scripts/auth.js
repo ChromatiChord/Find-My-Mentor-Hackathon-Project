@@ -58,7 +58,7 @@ async function menSignUp() {
     console.log(result);
     document.cookie = result['auth_token'];
     // redirect to mentor dashboard
-    loadStudentDashboard(result['mentor_id'])
+    loadMentorDashboard(result['mentor_id'])
   }
 }
 
@@ -67,7 +67,14 @@ async function signIn() {
     'email': document.getElementById('signin_email').value,
     'password': document.getElementById('signin_password').value
   }
-  const response = await fetch(`${BACKEND_URL}/signin`, {
+  const user_type = document.getElementById('user_type').value;
+  let route = "";
+  if (user_type == "u_type_stu") {
+    route = "StudSignIn"
+  } else {
+    route = "MentSignIn"
+  }
+  const response = await fetch(`${BACKEND_URL}/${route}`, {
     method: 'GET',
     headers: {
         'Accept': 'application/json',
@@ -83,9 +90,13 @@ async function signIn() {
     const result = await response.json();
     console.log(result);
     document.cookie = result['auth_token'];
+
     // redirect to mentor dashboard or student dashboard
-    // {URL}/mentordashboard/{result['mentor_id']}
-    // {URL}/studentdashboard/{result['student_id']}
+    if (user_type == "u_type_stu") {
+      loadStudentDashboard(result['student_id'])
+    } else {
+      loadMentorDashboard(result['mentor_id'])
+    }
   }
 }
 
