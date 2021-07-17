@@ -3,6 +3,7 @@
 body {
     font-family: "Montserrat", sans-serif;
     text-align: center;
+    background-color: coral;
 }
 
 p {
@@ -53,4 +54,13 @@ p {
 /* Title Image */
 .title-image {
     border-radius: 1rem;
+}
+
+.form-group {
+    width: 30rem;
+    margin: 0 auto;
+    text-align: left;
+    background-color: rgb(247, 96, 96);
+    padding: 2rem;
+    border-radius: 2rem;
 }
