@@ -7,8 +7,8 @@ async function stuSignUp() {
     'stu_phone': document.getElementById('stu_phone').value,
     'stu_email': document.getElementById('stu_signup_email').value,
     'stu_password': document.getElementById('stu_signup_password').value,
-    'stu_edu_category': document.getElementById('stu_edu_category').value,
-    'stud_level': document.getElementById('stud_level').value
+    'stu_level': document.getElementById('stu_level').value,
+    'stu_edu_category': document.getElementById('stu_edu_category').value
   }
   const response = await fetch(`${BACKEND_URL}/stu_signup`, {
     method: 'POST',
@@ -26,7 +26,7 @@ async function stuSignUp() {
     const result = await response.json();
     console.log(result);
     document.cookie = result['auth_token'];
-    // redirect to dashboard
+    // redirect to student dashboard
     loadStudentDashboard(result['student_id'])
   }
 }
@@ -39,7 +39,7 @@ async function menSignUp() {
     'men_email': document.getElementById('men_signup_email').value,
     'men_password': document.getElementById('men_signup_password').value,
     'men_edu_category': document.getElementById('men_edu_category').value,
-    'mend_level': document.getElementById('mend_level').value
+    'men_level': document.getElementById('men_level').value
   }
   const response = await fetch(`${BACKEND_URL}/men_signup`, {
     method: 'POST',
@@ -58,7 +58,7 @@ async function menSignUp() {
     console.log(result);
     document.cookie = result['auth_token'];
     // redirect to mentor dashboard
-    // {URL}/mentordashboard/{result['mentor_id']}
+    loadStudentDashboard(result['mentor_id'])
   }
 }
 

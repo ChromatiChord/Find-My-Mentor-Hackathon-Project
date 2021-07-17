@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' type='text/css' href='../styles.css'>
+        <link
+          rel="icon"
+          href="https://pngimage.net/wp-content/uploads/2018/06/hands-shaking-icon-png-5.png"
+          type="icon.png"
+          sizes="16x16"
+        />
+    </head>
+    <body>
+      <form>
+        <label for="men_fname">First Name:</label><br>
+        <input type="text" id="men_fname" name="men_fname"><br><br>
+        <label for="men_lname">Last Name:</label><br>
+        <input type="text" id="men_lname" name="men_lname"><br><br>
+        <label for="men_phone">Phone Number:</label><br>
+        <input type="text" id="men_phone" name="men_phone"><br><br>
+        <label for="men_email">Email:</label><br>
+        <input type="text" id="men_email" name="men_email"><br><br>
+        <label for="men_password">Password:</label><br>
+        <input type="text" id="men_password" name="men_password"><br><br>
+        <label for="men_level">What level of Student do you wish to teach for?:</label><br>
+        <select id="men_level">
+          <option value="PS">Primary School</option>
+          <option value="HS">High School</option>
+          <option value="UND">Undergraduate (University)</option>
+          <option value="POS">Postgraduate (University)</option>
+        </select><br><br>
+        <label for="men_edu_category">Education Category:</label><br>
+        <select id="men_edu_category">
+          <option value="art">Arts, Design and Archeitecture</option>
+          <option value="bus">Business</option>
+          <option value="eng">Engineering</option>
+          <option value="mat">Mathematics</option>
+          <option value="med">Medicine</option>
+          <option value="sci">Science</option>
+        </select><br><br>
+        <input type="button" Value="Submit" onclick=menSignUp()>
+      </form> 
+      <script src="../scripts/main.js"></script>
+      <script src="../scripts/auth.js"></script>
+      <script src="../scripts/dashboard.js"></script>
+    </body>
+
+</html>
