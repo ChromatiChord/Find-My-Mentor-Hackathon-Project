@@ -14,7 +14,7 @@ class stu_sign_up(Resource):
             abort(409, message="Student is already a member")
         else:
             user_id = random.randint(10000000,99999990)
-            student = StudModel(user_id = user_id, first_name = args['fname'], last_name = args['last_name'],
+            student = StudModel(user_id = user_id, first_name = args['first_name'], last_name = args['last_name'],
             email = args['email'], phone = args['phone'], password = args['password'], subject = args['subject'], level = args['level'])
             db.session.add(student)
             db.session.commit()
