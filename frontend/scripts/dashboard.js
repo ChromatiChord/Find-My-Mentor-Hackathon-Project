@@ -2,7 +2,8 @@ BACKEND_URL = "127.0.0.1/5000"
 
 async function loadStudentDashboard(student_id){
   // redirect to url
-  // {URL}/studentdashboard/{student_id}
+  window.location.href = `${BACKEND_URL}/student_dashboard/${student_id}`
+
   const response = await fetch(`${BACKEND_URL}/get_student_info/${student_id}`, {
     method: 'POST',
     headers: {
@@ -28,8 +29,8 @@ async function loadStudentDashboard(student_id){
 }
 
 async function loadMentorDashboard(mentor_id){
-  // redirect to url
-  // {URL}/mentordashboard/{mentor_id}
+    // redirect to url
+    window.location.href = `${BACKEND_URL}/mentor_dashboard/${mentor_id}`
   const response = await fetch(`${BACKEND_URL}/get_mentor_info/${mentor_id}`, {
     method: 'POST',
     headers: {
