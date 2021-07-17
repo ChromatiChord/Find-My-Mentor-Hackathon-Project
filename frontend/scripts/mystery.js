@@ -11,7 +11,7 @@ function main() {
     button.addEventListener("click", function () {
         value -= 1;
         button.innerHTML = value;
-        if (value === 99) {
+        if (value === -5) {
             document.body.appendChild(message);
         }
         if (value < 0) {
