@@ -13,3 +13,7 @@ body {
     border-radius: 10rem;
     border: 1px solid grey;
 }
+
+.mystery_message {
+    color: white;
+}

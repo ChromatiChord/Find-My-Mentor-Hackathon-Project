@@ -11,13 +11,12 @@ function main() {
     button.addEventListener("click", function () {
         value -= 1;
         button.innerHTML = value;
-        if (value === -5) {
+        if (value === 99) {
             document.body.appendChild(message);
         }
         if (value < 0) {
             document.body.style = "background-color: coral";
             document.getElementById("spooky_sound").volume = 0;
-            
         }
     });
     document.body.appendChild(button);
