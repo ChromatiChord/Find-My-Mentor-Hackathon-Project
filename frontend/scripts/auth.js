@@ -25,9 +25,9 @@ async function stuSignUp() {
   } else {
     const result = await response.json();
     console.log(result);
-    document.cookie = `auth_token=${result['auth_token']}`;
+    document.cookie = result['auth_token'];
     // redirect to dashboard
-    // {URL}/studentdashboard/{result['student_id']}
+    loadStudentDashboard(result['student_id'])
   }
 }
 
@@ -56,7 +56,7 @@ async function menSignUp() {
   } else {
     const result = await response.json();
     console.log(result);
-    document.cookie = `auth_token=${result['auth_token']}`;
+    document.cookie = result['auth_token'];
     // redirect to mentor dashboard
     // {URL}/mentordashboard/{result['mentor_id']}
   }
@@ -82,9 +82,10 @@ async function signIn() {
   } else {
     const result = await response.json();
     console.log(result);
-    document.cookie = `auth_token=${result['auth_token']}`;
-    // redirect to mentor dashboard, if student, redirect to mentordashboard or student dashboard
+    document.cookie = result['auth_token'];
+    // redirect to mentor dashboard or student dashboard
     // {URL}/mentordashboard/{result['mentor_id']}
-    // {URL}/mentordashboard/{result['mentor_id']}
+    // {URL}/studentdashboard/{result['student_id']}
   }
 }
+
