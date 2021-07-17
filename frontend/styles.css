@@ -64,8 +64,3 @@ p {
     padding: 2rem;
     border-radius: 2rem;
 }
-
-.submit_button:hover {
-    background-color: lightcoral;
-    transition: all;
-}
