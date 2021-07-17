@@ -16,9 +16,15 @@ BACKEND_URL = "http://127.0.0.1:5000"
 FRONTEND_URL = "http://127.0.0.1:5500"
 
 
-CORS(app, origins=FRONTEND_URL, allow_headers=[
-    "Content-Type", "Authorization", "Access-Control-Allow-Credentials", "Access-Control-Allow-Headers"],
-    supports_credentials=True)
+CORS(app, resources={
+  r"/*": {
+    "origins": "*"
+  }
+}, methods=['GET', 'POST', 'PUT', 'DELETE'])
+
+# CORS(app, origins=FRONTEND_URL, allow_headers=[
+#     "Content-Type", "Authorization", "Access-Control-Allow-Credentials", "Access-Control-Allow-Headers"],
+#     supports_credentials=True)
 ###########################################################################################
 
 

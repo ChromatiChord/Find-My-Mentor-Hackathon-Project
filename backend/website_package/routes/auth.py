@@ -2,7 +2,6 @@ from logging import makeLogRecord
 from flask_restx import Resource, abort, marshal_with
 from website_package.models import StudModel, MentModel, signin_post_args, mentor_database_parse, student_database_parse
 
-
 class MentSignIn(Resource):
     #Get request to log a student or mentor into the site
     @marshal_with(mentor_database_parse)

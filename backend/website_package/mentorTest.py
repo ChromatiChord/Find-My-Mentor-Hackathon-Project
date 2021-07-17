@@ -1,6 +1,6 @@
 import requests
 
-BASE_URL = "http://127.0.0.1:5000/"
+BASE_URL = "http://127.0.0.1:5000"
 
 data1 = {
     "email" : "hell this is my email",
@@ -32,13 +32,13 @@ data4 = {
     "level" : "High School",
     "contacts" : "slack and your mums phone"
 }
-output = requests.post(f"{BASE_URL}/MentSignIn", data=data1)
+output = requests.post(f"{BASE_URL}/men_sign_in", data=data1)
 print(output.text)
 output = requests.post(f"{BASE_URL}/stu_sign_up", data=data2)
 print(output.text)
-output = requests.post(f"{BASE_URL}/StudSignIn", data=data3)
+output = requests.post(f"{BASE_URL}/stu_sign_in", data=data3)
 print(output.text)
 output = requests.post(f"{BASE_URL}/mentor_sign_up", data=data4)
 print(output.text)
-output = requests.post(f"{BASE_URL}/MentSignIn", data=data3)
+output = requests.post(f"{BASE_URL}/men_sign_in", data=data3)
 print(output.text)
