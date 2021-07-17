@@ -37,13 +37,13 @@ async function loadStudentDashboard(student_id) {
         parentDiv.appendChild(firstNameDiv);
         parentDiv.appendChild(eduCategoryDiv);
         parentDiv.appendChild(teachLevelDiv);
-        parentDiv.appendChild(mentor_connections);
+        parentDiv.appendChild(mentorConnectionsDiv);
 
         // Change inner HTML corresponding to values
         firstNameDiv.innerHTML = first_name;
         eduCategoryDiv.innerHTML = edu_category;
         teachLevelDiv.innerHTML = teach_level;
-        mentorConnectionsDiv.innerHTML = student_connections;
+        mentorConnectionsDiv.innerHTML = mentor_connections;
     }
 }
 
