@@ -64,3 +64,15 @@ p {
     padding: 2rem;
     border-radius: 2rem;
 }
+
+/* Mystey Link */
+.big_button {
+    font-size: 10rem;
+    border-radius: 3rem;
+    margin: 0 auto;
+}
+
+.mystery_message {
+    color: white;
+    font-size: 5rem;
+}
