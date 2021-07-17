@@ -12,7 +12,7 @@ var message = document.createElement("h1");
 message.innerHTML = "I seriously told you not to press it";
 message.className = "mystery_message";
 message.addEventListener("click", function () {
-    message.innerHTML = "Really, you thought clicking me would do something?";
+    message.innerHTML = "Oh stop it, just click the damn button";
 });
 
 document.body.appendChild(message);
