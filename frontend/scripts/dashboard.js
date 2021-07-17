@@ -1,5 +1,3 @@
-BACKEND_URL = "127.0.0.1/5000"
-
 async function loadStudentDashboard(student_id){
   // redirect to url
   window.location.href = `${BACKEND_URL}/student_dashboard/${student_id}`

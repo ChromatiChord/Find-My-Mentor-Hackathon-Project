@@ -28,8 +28,8 @@ from website_package.routes import sms_route, student, auth, mentor
 api.add_resource(sms_route.Sms, '/sms')
 api.add_resource(student.stu_sign_up, '/stu_sign_up')
 api.add_resource(mentor.mentor_sign_up, '/mentor_sign_up')
-api.add_resource(auth.MentSignIn, '/MentSignIn')
-api.add_resource(auth.StudSignIn, '/StudSignIn')
+api.add_resource(auth.MentSignIn, '/men_sign_in')
+api.add_resource(auth.StudSignIn, '/stu_sign_in')
 
 # This generates a database if one doesn't currently exist
 db.create_all()

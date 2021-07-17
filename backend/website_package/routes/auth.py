@@ -4,7 +4,6 @@ from website_package.models import StudModel, MentModel, signin_post_args, mento
 
 
 class MentSignIn(Resource):
-
     #Get request to log a student or mentor into the site
     @marshal_with(mentor_database_parse)
     def post(self):
@@ -23,7 +22,6 @@ class MentSignIn(Resource):
             abort(409, message = "Invalid Email address")
 
 class StudSignIn(Resource):
-
     @marshal_with(student_database_parse)
     def post(self):
         args = signin_post_args.parse_args()
