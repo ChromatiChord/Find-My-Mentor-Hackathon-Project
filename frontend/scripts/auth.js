@@ -1,10 +1,8 @@
-BACKEND_URL = "127.0.0.1/5000"
-
 async function stuSignUp() {
   const stu_signup_data = {
-    'stu_fname': document.getElementById('stu_fname').value,
-    'stu_lname': document.getElementById('stu_lname').value,
-    'stu_phone': document.getElementById('stu_phone').value,
+    'stu_fname': document.getElementById('stu_signup_fname').value,
+    'stu_lname': document.getElementById('stu_signup_lname').value,
+    'stu_phone': document.getElementById('stu_signup_phone').value,
     'stu_email': document.getElementById('stu_signup_email').value,
     'stu_password': document.getElementById('stu_signup_password').value,
     'stu_level': document.getElementById('stu_level').value,
@@ -70,12 +68,13 @@ async function signIn() {
   const user_type = document.getElementById('user_type').value;
   let route = "";
   if (user_type == "u_type_stu") {
-    route = "StudSignIn"
+    route = "stu_sign_in";
   } else {
-    route = "MentSignIn"
+    route = "men_sign_in";
   }
+  console.log(`${BACKEND_URL}/${route}`)
   const response = await fetch(`${BACKEND_URL}/${route}`, {
-    method: 'GET',
+    method: 'POST',
     headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
