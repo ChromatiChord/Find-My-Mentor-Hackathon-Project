@@ -22,11 +22,9 @@ CORS(app, origins=FRONTEND_URL, allow_headers=[
 
 
 from website_package import models
-from website_package.routes import image_route, dummy_route, sms_route, student, auth, mentor
+from website_package.routes import sms_route, student, auth, mentor
 
 # This is where Routes are instantiated
-api.add_resource(image_route.Image, '/image/<string:img_id>')
-api.add_resource(dummy_route.Dummy, '/dummy')
 api.add_resource(sms_route.Sms, '/sms')
 api.add_resource(student.stu_sign_up, '/stu_sign_up')
 api.add_resource(mentor.mentor_sign_up, '/mentor_sign_up')
