@@ -20,10 +20,6 @@ function main() {
         }
     });
     document.body.appendChild(button);
-
-    var message = document.createElement("h1");
-    message.innerHTML = "I told you not to click the link";
-    message.className = "mystery_message";
 }
 
 main();
