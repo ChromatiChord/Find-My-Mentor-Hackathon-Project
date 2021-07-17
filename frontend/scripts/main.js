@@ -12,6 +12,9 @@ document.getElementById("stuSignUp").addEventListener("click", function() {
 }, false);
 
 document.getElementById("signin").addEventListener("click", function() {
-  console.log("huh thats weird")
   window.location.href = "../html/sign_in.html";
+}, false);
+
+document.getElementById("aboutUs").addEventListener("click", function() {
+  window.location.href = "../html/about_us.html";
 }, false);

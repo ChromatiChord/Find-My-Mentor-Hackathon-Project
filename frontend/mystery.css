@@ -1,0 +1,19 @@
+body {
+    background-color: #2e2626;
+    text-align: center;
+}
+
+.big_button {
+    background-color: grey;
+    color: white;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 10rem;
+    font-size: 10rem;
+    border-radius: 10rem;
+    border: 1px solid grey;
+}
+
+.mystery_message {
+    color: white;
+}
