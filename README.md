@@ -1,6 +1,6 @@
 # REQUEST STRUCTURE
 
-## STUDENT SIGN UP
+## STUDENT SIGN UP (/stu_signup)
 #### Request
 ```
 {
@@ -19,11 +19,12 @@
 ```
 {
 	auth_token (String)
+  student_id
 }
 ```
 
 
-## STUDENT SIGN IN
+## STUDENT SIGN IN (/stu_signin)
 #### Request
 ```
 {
@@ -35,11 +36,12 @@
 ```
 {
 	auth_token
+  student_id
 }
 ```
 
 
-## GET STUDENT DASHBOARD INFO
+## GET STUDENT DASHBOARD INFO (/get_student_info/[student_id])
 #### Request
 ```
 {
@@ -57,7 +59,7 @@
 ```
 
 
-## MENTOR SIGN UP
+## MENTOR SIGN UP (/mentor_signup)
 #### Request
 ```
 {
@@ -76,11 +78,12 @@
 ```
 {
   auth_token
+  mentor_id
 }
 ```
 
 
-## MENTOR SIGN IN
+## MENTOR SIGN IN (/mentor_signin)
 #### Request
 ```
 {
@@ -92,11 +95,12 @@
 ```
 {
   auth_token
+  mentor_id
 }
 ```
 
 
-## GET MENTOR DASHBOARD INFO
+## GET MENTOR DASHBOARD INFO (/get_mentor_info/[mentor_id])
 #### Request
 ```
 {
