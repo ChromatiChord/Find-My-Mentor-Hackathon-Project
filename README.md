@@ -4,13 +4,13 @@
 #### Request
 ```
 {
-	First name
-	Last name
-	Mobile Number
-	Email
-	Password
-	Education Category (Could select ANY)
-	Preferred Teaching level: [PS, HS, UND, POST]
+	fname
+	lname
+	phone
+	email
+	password
+	edu_category (Could select ANY)
+	teach_level [PS, HS, UND, POST]
 }
 ```
 
@@ -27,14 +27,14 @@
 #### Request
 ```
 {
-	First name
-	Last name
-	Mobile Number
-	Email
-	Password
-	Education Category
-	Preferred Teaching level (String: HS or Uni or postgrad)
-	Contact List (List of available means to contact them: Discord, Slack, etc)
+	fname
+	lname
+	phone
+	email
+	password
+	edu_category (Could select ANY)
+	teach_level [PS, HS, UND, POST]
+	contacts (List of available means to contact them: Discord, Slack, etc)
 }
 ```
 #### Response
@@ -49,8 +49,8 @@
 #### Request
 ```
 {
-	Email
-	Password	
+	email
+	password	
 }
 ```
 #### Response
@@ -58,7 +58,7 @@
 {
   auth_token
   mentor_id
-  type: ('Student' or 'Mentor')
+  user_type: ('Student' or 'Mentor')
 }
 ```
 
@@ -72,10 +72,10 @@
 #### Response
 ```
 {
-	First name
-	Education Category (Could select ANY)
-	Preferred Teaching level: [PS, HS, UND, POST]
-	Mentor available connections (will return null if no mentor has been connected)
+	fname
+	edu_category
+	teach_level: [PS, HS, UND, POST]
+	mentor_connections (will return null if no mentor has been connected)
 }
 ```
 
@@ -89,9 +89,9 @@
 #### Response
 ```
 {
-	First name
-	Education Category (Could select ANY)
-	Preferred Teaching level (String: HS, Uni, or postgrad)
-	Student available connections (will return null if no students are connected)
+	fname
+	edu_category
+	teach_level: [PS, HS, UND, POST]
+	student_connections (will return null if no students are connected)
 }
 ```
