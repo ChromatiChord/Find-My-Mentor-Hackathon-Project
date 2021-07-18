@@ -1,33 +1,35 @@
 async function stuSignUp() {
-    const stu_signup_data = {
-        stu_fname: document.getElementById("stu_signup_fname").value,
-        stu_lname: document.getElementById("stu_signup_lname").value,
-        stu_phone: document.getElementById("stu_signup_phone").value,
-        stu_email: document.getElementById("stu_signup_email").value,
-        stu_password: document.getElementById("stu_signup_password").value,
-        stu_level: document.getElementById("stu_level").value,
-        stu_edu_category: document.getElementById("stu_edu_category").value,
-        stu_contact: document.getElementById("stu_contect").value,
-    };
-    const response = await fetch(`${BACKEND_URL}/stu_signup`, {
-        method: "POST",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(stu_signup_data),
-    });
+    // const stu_signup_data = {
+    //     stu_fname: document.getElementById("stu_signup_fname").value,
+    //     stu_lname: document.getElementById("stu_signup_lname").value,
+    //     stu_phone: document.getElementById("stu_signup_phone").value,
+    //     stu_email: document.getElementById("stu_signup_email").value,
+    //     stu_password: document.getElementById("stu_signup_password").value,
+    //     stu_level: document.getElementById("stu_level").value,
+    //     stu_edu_category: document.getElementById("stu_edu_category").value,
+    //     stu_contact: document.getElementById("stu_contect").value,
+    // };
+    // const response = await fetch(`${BACKEND_URL}/stu_signup`, {
+    //     method: "POST",
+    //     headers: {
+    //         Accept: "application/json",
+    //         "Content-Type": "application/json",
+    //     },
+    //     body: JSON.stringify(stu_signup_data),
+    // });
 
-    if (!response.ok) {
-        const message = `Error: ${response.status}`;
-        throw new Error(message);
-    } else {
-        const result = await response.json();
-        console.log(result);
-        document.cookie = result["auth_token"];
-        // redirect to student dashboard
-        loadStudentDashboard(result["student_id"]);
-    }
+    // if (!response.ok) {
+    //     const message = `Error: ${response.status}`;
+    //     throw new Error(message);
+    // } else {
+    //     const result = await response.json();
+    //     console.log(result);
+    //     document.cookie = result["auth_token"];
+    //     // redirect to student dashboard
+    //     loadStudentDashboard(result["student_id"]);
+    // }
+
+    location.href = "../html/student_dashboard.html";
 }
 
 async function menSignUp() {
