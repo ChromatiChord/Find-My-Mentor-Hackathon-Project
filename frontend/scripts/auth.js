@@ -31,9 +31,9 @@ async function stuSignUp() {
 
 async function menSignUp() {
   const men_signup_data = {
-    'men_fname': document.getElementById('men_fname').value,
-    'men_lname': document.getElementById('men_lname').value,
-    'men_phone': document.getElementById('men_phone').value,
+    'men_fname': document.getElementById('men_signup_fname').value,
+    'men_lname': document.getElementById('men_signup_lname').value,
+    'men_phone': document.getElementById('men_signup_phone').value,
     'men_email': document.getElementById('men_signup_email').value,
     'men_password': document.getElementById('men_signup_password').value,
     'men_edu_category': document.getElementById('men_edu_category').value,
@@ -43,7 +43,7 @@ async function menSignUp() {
     method: 'POST',
     headers: {
         'Accept': 'application/json',
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
     },
     body: JSON.stringify(men_signup_data),
   })
