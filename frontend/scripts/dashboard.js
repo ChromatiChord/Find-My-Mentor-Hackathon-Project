@@ -27,23 +27,6 @@ async function loadStudentDashboard(student_id) {
 
         // load content onto page with above variables
         window.location("student_dashboard.html");
-        // Create divs
-        var parentDiv = document.createElement("div");
-        var firstNameDiv = document.createElement("div");
-        var eduCategoryDiv = document.createElement("div");
-        var teachLevelDiv = document.createElement("div");
-        var mentorConnectionsDiv = document.createElement("div");
-
-        parentDiv.appendChild(firstNameDiv);
-        parentDiv.appendChild(eduCategoryDiv);
-        parentDiv.appendChild(teachLevelDiv);
-        parentDiv.appendChild(mentorConnectionsDiv);
-
-        // Change inner HTML corresponding to values
-        firstNameDiv.innerHTML = first_name;
-        eduCategoryDiv.innerHTML = edu_category;
-        teachLevelDiv.innerHTML = teach_level;
-        mentorConnectionsDiv.innerHTML = mentor_connections;
     }
 }
 
@@ -75,22 +58,5 @@ async function loadMentorDashboard(mentor_id) {
 
         // load content onto page with above variables
         window.location("mentor_dashboard.html");
-        // Create divs
-        var parentDiv = document.createElement("div");
-        var firstNameDiv = document.createElement("div");
-        var eduCategoryDiv = document.createElement("div");
-        var teachLevelDiv = document.createElement("div");
-        var studentConnectionsDiv = document.createElement("div");
-
-        parentDiv.appendChild(firstNameDiv);
-        parentDiv.appendChild(eduCategoryDiv);
-        parentDiv.appendChild(teachLevelDiv);
-        parentDiv.appendChild(studentConnectionsDiv);
-
-        // Change inner HTML corresponding to values
-        firstNameDiv.innerHTML = first_name;
-        eduCategoryDiv.innerHTML = edu_category;
-        teachLevelDiv.innerHTML = teach_level;
-        studentConnectionsDiv.innerHTML = student_connections;
     }
 }
